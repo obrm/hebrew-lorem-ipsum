@@ -21,12 +21,13 @@ const App = () => {
             type='number'
             id='amount'
             value={count}
-            onChange={(e) =>
-              setCount(() => {
-                if (e.target.value >= data.length) return data.length
-                if (e.target.value < 1) return 1
-                return e.target.value
-              })
+            onChange={
+              (e) => setCount(e.target.value)
+              // setCount(() => {
+              //   if (e.target.value >= data.length) return data.length
+              //   if (e.target.value < 1) return 1
+              //   return e.target.value
+              // })
             }
           />
           <button type='submit' className='btn'>
